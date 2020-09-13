@@ -13,8 +13,8 @@ class Product {
     categoryId = json["categoryId"];
     productName = json["productName"];
     quantityPerUnit = json["quantityPerUnit"];
-    unitPrice = json["unitPrice"];
-    unitsInStock = json["unitsInStock"];
+    unitPrice = double.tryParse(json["unitPrice"].toString());
+    unitsInStock = int.tryParse(json["unitsInStock"].toString());
   }
 
   Map toJson(){
